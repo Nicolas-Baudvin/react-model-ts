@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.vs/
+.vs-code/
+
+.DS_Store
+Thumbs.db
+
+yarn-error.log
+npm-debug.log
+
+seemygames.com+4-key.pem
+seemygames.com+4.pem
