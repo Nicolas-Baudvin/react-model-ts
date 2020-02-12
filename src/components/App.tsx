@@ -4,18 +4,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import '../styles/index.scss';
 import "./app.scss";
 import { counterAction } from '../store/counter/actions';
-
-interface counterOptions {
-    nbr: number
-}
-
-interface stateOptions {
-    counter: counterOptions
-}
+import { RootState } from '../store/reducer';
 
 const App = () => {
     const dispatch = useDispatch();
-    const { nbr } = useSelector((state: stateOptions) => state.counter)
+    const { nbr } = useSelector((state: RootState) => state.counter)
     console.log(nbr);
     const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
         e.preventDefault();
