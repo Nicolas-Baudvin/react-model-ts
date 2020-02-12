@@ -21,11 +21,17 @@ import ReactDOM from 'react-dom';
 /**
  * Imports locaux
  */
-import App from './components/App';
+import { Provider } from 'react-redux';
+
+/**
+ * Imports locaux
+ */
+import App from 'src/components/App';
+import appStore from 'src/store/index.ts';
 
 /**
  * Code
  */
-const rootComponent = <App />;
+const rootComponent = <Provider store={appStore}><App /></Provider>;
 const renderingArea = document.querySelector('#root');
 ReactDOM.render(rootComponent, renderingArea);
