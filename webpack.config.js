@@ -21,10 +21,10 @@ module.exports = {
     devtool: 'eval-source-map',
     // Expose le dossier src/ pour les imports
     resolve: {
-        extensions: ['.ts', '.tsx', '.js'],
         alias: {
             src: path.resolve(__dirname, 'src/'),
         },
+        extensions: ['.ts', '.tsx', '.js'],
     },
     // Points d'entrée pour le travail de Webpack
     entry: {
@@ -118,9 +118,9 @@ module.exports = {
             },
         ],
     },
-    resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
-    },
+    // resolve: {
+    //     extensions: ['.tsx', '.ts', '.js'],
+    // },
     devServer: {
         overlay: true, // Overlay navigateur si erreurs de build
         stats: 'minimal', // Infos en console limitées
