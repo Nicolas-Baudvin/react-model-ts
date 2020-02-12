@@ -1,17 +1,20 @@
 {
-  "name": "react-typescript-boilerplate",
+  "name": "react-modele-tsx",
   "version": "1.0.0",
-  "description": "",
+  "private": false,
   "main": "index.js",
   "scripts": {
     "bundle": "webpack",
     "test": "jest",
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
+    "clean": "rm -rf dist",
+    "clean:all": "rm -rf dist node_modules",
+    "build:dev": "NODE_ENV=development webpack",
+    "build:dev:win": "set NODE_ENV=development && webpack",
+    "build:prod": "NODE_ENV=production webpack --mode production",
+    "build:prod:win": "set NODE_ENV=production && webpack --mode production",
     "check-types": "tsc"
-  },
-  "resolutions": {
-    "serialize-javascript": "^2.1.1"
   },
   "keywords": [],
   "author": "",
@@ -59,6 +62,9 @@
     "webpack-cli": "^3.3.8",
     "webpack-dev-server": "^3.8.0",
     "yargs": "^14.2.0"
+  },
+  "bin": {
+    "react-modele-tsx": "bin/run.js"
   },
   "dependencies": {
     "@babel/polyfill": "*",
