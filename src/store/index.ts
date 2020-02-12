@@ -24,3 +24,4 @@ const reactModelStore = createStore(
 // window.store = reactModelStore;
 
 export default reactModelStore;
+export type AppDispatch = typeof reactModelStore.dispatch
