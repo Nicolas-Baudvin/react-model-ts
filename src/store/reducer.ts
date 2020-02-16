@@ -1,3 +1,6 @@
+/**
+ * Import des reducers
+ */
 import { combineReducers } from 'redux';
 import counter from './counter/reducer';
 

@@ -27,7 +27,7 @@ import { Provider } from 'react-redux';
  * Imports locaux
  */
 import App from 'src/components/App';
-import appStore from 'src/store/index.ts';
+import appStore from 'src/store/index';
 
 /**
  * Code

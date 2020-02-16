@@ -1,8 +1,11 @@
+/**
+ * Import des types
+ */
 import { storeOptions } from './types';
+import { RootState } from './reducer';
 
 export default (store: storeOptions) => (next: Function) => (action: object) => {
-  console.log('middleware', action);
-  const state: object = store.getState();
+  const state: RootState = store.getState();
   console.log(state);
   next(action);
 };

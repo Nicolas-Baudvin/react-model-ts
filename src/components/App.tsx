@@ -1,10 +1,24 @@
+/**
+ * Import des dépendances
+ */
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+/**
+ * Import des styles
+ */
 import '../styles/index.scss';
 import "./app.scss";
-import { counterAction } from '../store/counter/actions';
+
+/**
+ * Import des types
+ */
 import { RootState } from '../store/reducer';
+
+/**
+ * Import des composants actions etc ...
+ */
+import { counterAction } from '../store/counter/actions';
 
 const App = () => {
     const dispatch = useDispatch();
